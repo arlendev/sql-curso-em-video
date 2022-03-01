@@ -1,11 +1,4 @@
-CREATE DATABASE cadastro;
-CREATE TABLE pessoas (
-nome varchar(30),
-idade tinyint(3),
-sexo char(1),
-peso float,
-altura float,
-nacionalidade varchar(20)
-);
+CREATE DATABASE cadastro
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
 
-SELECT * FROM pessoas;
