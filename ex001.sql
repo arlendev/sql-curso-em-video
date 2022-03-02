@@ -22,3 +22,14 @@ SELECT * FROM pessoas;
 
 DELETE FROM pessoas
 WHERE id = 5;
+
+DESC pessoas;
+
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10);
+
+ALTER TABLE pessoas
+DROP COLUMN profissao;
+
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10) AFTER nome;
