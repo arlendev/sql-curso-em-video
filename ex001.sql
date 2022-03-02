@@ -13,9 +13,12 @@ nacionalidade VARCHAR(20) DEFAULT 'Brasil',
 PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8;
 
-INSERT INTO pessoas
-(nome, nascimento, sexo, peso, altura)
-VALUE
-('Creusa', '1920-12-30', 'F', '50.2', '1.65');
+INSERT INTO pessoas 
+(nome, nascimento, sexo, peso, altura, nacionalidade)
+VALUES
+('Adalgiza', '1930-11-02', 'F', '63.2', '1.75', 'Irlanda');
 
 SELECT * FROM pessoas;
+
+DELETE FROM pessoas
+WHERE id = 5;
