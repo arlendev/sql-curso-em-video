@@ -33,3 +33,14 @@ DROP COLUMN profissao;
 
 ALTER TABLE pessoas
 ADD COLUMN profissao VARCHAR(10) AFTER nome;
+
+RENAME TABLE pessoas TO gafanhotos;
+
+CREATE TABLE IF NOT EXISTS cursos (
+nome VARCHAR(30) NOT NULL UNIQUE,
+descricao TEXT,
+carga INT UNSIGNED,
+totaulas INT UNSIGNED,
+ano YEAR DEFAULT '2022'
+) DEFAULT CHARSET = utf8;
+
