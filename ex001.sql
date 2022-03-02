@@ -44,3 +44,24 @@ totaulas INT UNSIGNED,
 ano YEAR DEFAULT '2022'
 ) DEFAULT CHARSET = utf8;
 
+ALTER TABLE cursos
+ADD COLUMN idcurso INT FIRST;
+
+ALTER TABLE cursos
+ADD PRIMARY KEY (idcurso);
+
+SELECT * FROM cursos;
+
+create table if not exists teste(
+id int,
+nome varchar(10),
+idade int);
+
+insert into teste values
+('1', 'Pedro', '22'),
+('2', 'Mria', '12'),
+('3', 'Maricota', '77');
+
+select * from teste;
+
+drop table teste;
