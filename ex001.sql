@@ -13,7 +13,7 @@ nacionalidade VARCHAR(20) DEFAULT 'Brasil',
 PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8;
 
-INSERT INTO gafanhotos 
+INSERT INTO pessoas 
 (nome, nascimento, sexo, peso, altura, nacionalidade)
 VALUES
 ('Janaína', '1987-11-12', 'F', '75.40', '1.66', 'EUA');
@@ -52,18 +52,43 @@ ADD PRIMARY KEY (idcurso);
 
 SELECT * FROM cursos;
 
-create table if not exists teste(
-id int,
-nome varchar(10),
-idade int);
+CREATE TABLE IF NOT EXISTS teste(
+id INT,
+nome VARCHAR(10),
+idade INT);
 
-insert into teste values
+INSERT INTO teste VALUES
 ('1', 'Pedro', '22'),
 ('2', 'Mria', '12'),
 ('3', 'Maricota', '77');
 
-select * from teste;
+SELECT * FROM teste;
 
-drop table teste;
+DROP TABLE teste;
 
-select * from gafanhotos;
+INSERT INTO gafanhotos 
+(nome, nascimento, sexo, peso, altura, nacionalidade)
+VALUES
+('Janaína', '1987-11-12', 'F', '75.40', '1.66', 'EUA');
+
+SELECT * FROM gafanhotos;
+
+INSERT INTO cursos VALUES
+ ('1','HTML4','Curso de HTML5','40','37','2014'),
+ ('2','Algoritimos','Logica de Programação','20','8','2014'),
+ ('3','Photoshop','Aulas de Photoshop CC','9','20','2014'),
+ ('4','PGP','PHP para Iniciantes','33','40','2010'),
+ ('5','Jarva','Intro ao Java','22','10','2000'),
+ ('6','MySQL','Curso MySQL','21','15','2016'),
+ ('7','World','Word Completo','40','30','2018'),
+ ('8','Sapateado','Dança Rítimica','14','30','2018'),
+ ('9','Cozinha Árabe','Aprenda a fazer Kibe','40','30','2018'),
+ ('10','YouTuber','Gerar Polêmicas e Ganhar Inscritos','5','2','2010');
+ 
+ SELECT * FROM cursos;
+ 
+ UPDATE cursos
+ SET ano = '2050', carga = '800'
+ WHERE ano = '2018';
+ 
+
