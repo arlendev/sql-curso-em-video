@@ -13,10 +13,10 @@ nacionalidade VARCHAR(20) DEFAULT 'Brasil',
 PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8;
 
-INSERT INTO pessoas 
+INSERT INTO gafanhotos 
 (nome, nascimento, sexo, peso, altura, nacionalidade)
 VALUES
-('Adalgiza', '1930-11-02', 'F', '63.2', '1.75', 'Irlanda');
+('Janaína', '1987-11-12', 'F', '75.40', '1.66', 'EUA');
 
 SELECT * FROM pessoas;
 
@@ -65,3 +65,5 @@ insert into teste values
 select * from teste;
 
 drop table teste;
+
+select * from gafanhotos;
