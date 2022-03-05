@@ -88,7 +88,11 @@ INSERT INTO cursos VALUES
  SELECT * FROM cursos;
  
  UPDATE cursos
- SET ano = '2018', carga = '40'
+ SET ano = '2018', carga = '30'
  WHERE ano = '2050';
+ 
+ DELETE FROM cursos
+ WHERE idcurso = 10;
+ 
  
 
