@@ -94,5 +94,6 @@ INSERT INTO cursos VALUES
  DELETE FROM cursos
  WHERE idcurso = 10;
  
+ TRUNCATE cursos;
  
 
