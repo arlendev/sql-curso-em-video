@@ -116,4 +116,14 @@ ORDER BY ano, nome;
 SELECT * FROM cursos
 WHERE nome LIKE 'a%'; # like significa parecido e % = nenhum caractere ou vários caracteres
 
+# a% = A no início
+# %A = A no final
+# %A% = A no meio
+
+SELECT * FROM gafanhotos
+WHERE nome like '%silva';
+
+SELECT DISTINCT nacionalidade FROM gafanhotos
+ORDER BY nacionalidade;
+
 
