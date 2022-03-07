@@ -109,4 +109,6 @@ INSERT INTO cursos VALUES
  WHERE ano <= 2015
  ORDER BY nome;
  
-
+SELECT nome, ano FROM cursos
+WHERE ano BETWEEN 2014 AND 2016
+ORDER BY ano, nome;
