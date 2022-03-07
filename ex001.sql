@@ -126,4 +126,56 @@ WHERE nome like '%silva';
 SELECT DISTINCT nacionalidade FROM gafanhotos
 ORDER BY nacionalidade;
 
+SELECT * FROM cursos;
 
+SELECT totaulas, COUNT(*) FROM cursos
+GROUP BY totaulas
+ORDER BY totaulas;
+
+SELECT * FROM cursos WHERE totaulas = 12;
+
+SELECT carga, COUNT(nome) FROM cursos
+GROUP BY carga
+HAVING COUNT(nome) > 3;
+
+SELECT ano, COUNT(*) FROM cursos
+GROUP BY ano
+ORDER BY COUNT(*) desc;
+
+SELECT ano, COUNT(*) FROM cursos
+GROUP BY ano 
+HAVING COUNT(ano) >= 5
+ORDER BY COUNT(*) desc;
+
+SELECT ano, COUNT(*) FROM cursos
+WHERE totaulas > 30
+GROUP BY ano
+HAVING ano > 2013
+ORDER BY COUNT(*) desc;
+
+SELECT AVG(carga) FROM cursos;
+
+SELECT carga, COUNT(*) FROM cursos
+WHERE ano > 2015
+GROUP BY carga
+HAVING carga > (SELECT AVG(carga) FROM cursos);
+
+
+SELECT * FROM gafanhotos;
+
+# 1) uma lista com as profissoes dos gafanhatos e seus respectivos quantitativos.
+SELECT profissao, COUNT(*) FROM gafanhotos
+GROUP BY profissao;
+
+#  2) Quantos gafanhotos homens e mulheres nasceram após 01/jan/2005 ?
+SELECT sexo, COUNT(*) FROM gafanhotos
+WHERE nascimento > '2005-01-01'
+GROUP BY sexo;
+
+/* 3) Lista com gafanhotos que nasceram fora do BRASIL, mostrando o país de origem
+e o total de pessoas nascidas lá. Só nos interessam os países que tiveram mais de 3
+gafanhotos com essa nacionalidade. */
+
+
+/* 4) Uma lista agrupada pela altura dos gafanhotos ,mostrando quantas pessoas 
+pesam mais de 100kg e que estao acima da media da altura de todos os gafanhotoso.*/
