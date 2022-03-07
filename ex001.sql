@@ -96,4 +96,13 @@ INSERT INTO cursos VALUES
  
  TRUNCATE cursos;
  
+ DROP DATABASE cadastro;
+ 
+ SELECT * FROM gafanhotos;
+ SELECT * FROM cursos
+ ORDER BY nome;
+ 
+ SELECT nome, carga, ano FROM cursos
+ ORDER BY nome;
+ 
 
