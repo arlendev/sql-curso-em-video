@@ -112,3 +112,8 @@ INSERT INTO cursos VALUES
 SELECT nome, ano FROM cursos
 WHERE ano BETWEEN 2014 AND 2016
 ORDER BY ano, nome;
+
+SELECT * FROM cursos
+WHERE nome LIKE 'a%'; # like significa parecido e % = nenhum caractere ou vários caracteres
+
+
