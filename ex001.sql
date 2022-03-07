@@ -103,6 +103,10 @@ INSERT INTO cursos VALUES
  ORDER BY nome;
  
  SELECT nome, carga, ano FROM cursos
+ ORDER BY ano,nome;
+ 
+ SELECT nome, descricao, ano FROM cursos
+ WHERE ano <= 2015
  ORDER BY nome;
  
 
