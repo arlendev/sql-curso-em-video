@@ -175,7 +175,10 @@ GROUP BY sexo;
 /* 3) Lista com gafanhotos que nasceram fora do BRASIL, mostrando o país de origem
 e o total de pessoas nascidas lá. Só nos interessam os países que tiveram mais de 3
 gafanhotos com essa nacionalidade. */
-
+SELECT nacionalidade, COUNT(*) FROM gafanhotos
+WHERE nacionalidade != 'Brasil'
+GROUP BY nacionalidade
+HAVING COUNT(*) > '3';
 
 /* 4) Uma lista agrupada pela altura dos gafanhotos ,mostrando quantas pessoas 
 pesam mais de 100kg e que estao acima da media da altura de todos os gafanhotoso.*/
