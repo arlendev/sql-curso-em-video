@@ -21,3 +21,5 @@ ON g.id = a.idgafanhoto
 JOIN cursos AS c
 ON c.idcurso = a.idcurso
 ORDER BY g.nome;
+
+SELECT * FROM gafanhotos;
