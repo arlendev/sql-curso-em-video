@@ -22,4 +22,7 @@ JOIN cursos AS c
 ON c.idcurso = a.idcurso
 ORDER BY g.nome;
 
-SELECT * FROM gafanhotos;
+SELECT gafanhotos.nome, cursos.nome, cursos.ano 
+FROM gafanhotos INNER JOIN cursos
+ON cursos.idcurso = gafanhotos.cursopreferido
+ORDER BY gafanhotos.nome;
